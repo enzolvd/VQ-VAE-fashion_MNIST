@@ -159,20 +159,20 @@ class VQ_VAE(nn.Module):
         # Run the whole encoder-quantization-decoder steps
 
         #Encoder
-        encoded_latent_vectors = self.encoder(X)
+        ze = self.encoder(X)
 
         #Quantization
-        flat_latents = encoded_latent_vectors.permute(0,2,3,1).reshape(-1, self.embedding_dim)
-        distances = torch.cdist(flat_latents, self.embedding_vectors.weight)
+        ze_flat = ze.permute(0,2,3,1).reshape(-1, self.embedding_dim)
+        distances = torch.cdist(ze_flat, self.embedding_vectors.weight)
         best_indices = distances.argmin(dim=1)
         quantized_latent = self.embedding_vectors(best_indices)
-        quantized_reshaped = quantized_latent.view(*encoded_latent_vectors.permute(0,2,3,1).shape)
+        quantized_reshaped = quantized_latent.view(*ze.permute(0,2,3,1).shape)
         quantized_reshaped = quantized_reshaped.permute(0,3,1,2)        
-        quantized_st = encoded_latent_vectors + (quantized_reshaped - encoded_latent_vectors).detach()
+        zq = ze + (quantized_reshaped - ze).detach()
         
         #Decoder
-        reconstructed = self.decoder(quantized_st)
-        return reconstructed, encoded_latent_vectors, quantized_reshaped, best_indices
+        reconstructed = self.decoder(zq)
+        return reconstructed, ze, quantized_reshaped, best_indices
 
     def reconstruction_loss(self, input, output):
         return torch.nn.functional.mse_loss(input, output)
