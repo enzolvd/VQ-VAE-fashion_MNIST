@@ -33,23 +33,6 @@ The figure bellow illustrate this implementation
 - Beta (commitment loss): 0.25
 - Optimizer: Adam
 
-## Key Findings
-
-### Latent Space Analysis
-- Distinct codebook usage patterns across clothing categories
-- Clear clustering of similar clothing items in t-SNE visualization
-- Specialized codebook vectors for specific clothing features
-
-### Reconstruction Quality
-- Best performance on structured items (trousers, boots)
-- Higher variability in complex items (shirts, pullovers)
-- Successful capture of main clothing features and shapes
-
-### Interpolation Results
-- Smooth transitions between clothing categories
-- Coherent intermediate representations
-- Meaningful latent space organization
-
 ## Requirements
 
 ```
@@ -70,7 +53,7 @@ seaborn
 python VQ_VAE.py
 ```
 
-2. Analyze results:
+2. Visualize training results:
 ```python
 from utils import load_losses, plot_losses, find_best_model_params
 
