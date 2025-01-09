@@ -143,7 +143,7 @@ def plot_losses(loaded_losses):
         
     for embedding_dim in type_embedding_dim.keys():
         legend.append(plt.Line2D([0], [0], color=type_embedding_dim[embedding_dim], 
-                                    label=f'num_embedding={embedding_dim}', linestyle='solid'))
+                                    label=f'embedding_dim={embedding_dim}', linestyle='solid'))
 
     legend.append(plt.Line2D([0], [0], color='black', linestyle='solid', label='Train'))
     legend.append(plt.Line2D([0], [0], color='black', linestyle='dashed', label='Test'))
