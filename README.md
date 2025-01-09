@@ -16,7 +16,7 @@ PyTorch implementation of Vector Quantized Variational Autoencoder (VQ-VAE) for 
   - Mirrored encoder architecture
   - Upsampling and reconstruction
 
-![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
+![Alt text](https://github.com/enzolvd/VQ-VAE-fashion_MNIST/blob/main/VQ_VAE_flowchart.png "a title")
 
 ## Implementation
 
