@@ -13,8 +13,8 @@ PyTorch implementation of Vector Quantized Variational Autoencoder (VQ-VAE) for 
   - Straight-through gradient estimator
 
 - **Decoder**: 12x12xembedding_dim → 28x28x1
-  - Mirrored encoder architecture
-  - Upsampling and reconstruction
+  - Upsampling and reconstruction  - 
+  - Batch normalization and ReLU activation
  
 The figure bellow illustrate this implementation
 ![](https://github.com/enzolvd/VQ-VAE-fashion_MNIST/blob/main/VQ_VAE_flowchart.png)
