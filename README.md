@@ -17,7 +17,7 @@ PyTorch implementation of Vector Quantized Variational Autoencoder (VQ-VAE) for 
   - Upsampling and reconstruction
  
 The figure bellow illustrate this implementation
-[![](https://github.com/enzolvd/VQ-VAE-fashion_MNIST/blob/main/VQ_VAE_flowchart.png)
+![](https://github.com/enzolvd/VQ-VAE-fashion_MNIST/blob/main/VQ_VAE_flowchart.png)
 ## Implementation
 
 ### Files Structure
