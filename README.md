@@ -24,7 +24,7 @@ The figure bellow illustrate this implementation
 - `model.py`: VQ-VAE architecture (Encoder, Decoder, Vector Quantizer)
 - `utils.py`: Training utilities and visualization
 - `VQ_VAE.py`: Training script and hyperparameter search
-- `analysis.ipynb`: Results analysis and latent space visualization
+- `results_analysis.ipynb`: Results analysis and latent space visualization
 
 ### Hyperparameters
 - Number of embeddings: [25, 50, 100]
