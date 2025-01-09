@@ -65,5 +65,17 @@ best_params = find_best_model_params(losses)
 
 3. Run analysis notebook for detailed visualizations and insights
 
-## References:
+## References
 [^1]: van den Oord, A., Vinyals, O., & Kavukcuoglu, K. (2018). Neural Discrete Representation Learning. arXiv preprint arXiv:1711.00937.
+
+## BibTeX Citation
+```bibtex
+@misc{oord2018neuraldiscreterepresentationlearning,
+    title={Neural Discrete Representation Learning}, 
+    author={Aaron van den Oord and Oriol Vinyals and Koray Kavukcuoglu},
+    year={2018},
+    eprint={1711.00937},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG},
+    url={https://arxiv.org/abs/1711.00937}, 
+}
