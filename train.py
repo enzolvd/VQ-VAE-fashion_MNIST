@@ -3,6 +3,7 @@ from torchvision import datasets, transforms
 from tqdm import tqdm
 from model import VQ_VAE
 from utils import train, eval, save_checkpoint
+import pickle
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 check_path = f'./checkpoints/'
@@ -66,7 +67,7 @@ for num_embedding in num_embeddings:
                 VQ_losses_val.append(VQ_loss_val)
                 commitment_losses_val.append(commitment_loss_val)
                 progress_bar.set_description(f'Val: loss={loss_val}, recon={reconstruction_loss_val}, VQ={VQ_loss_val}, com={commitment_loss_val}')
-                # og_vs_pred(model, test_dataloader)
+                
             else:
                 progress_bar.set_description(f'Train: loss={loss_train}, recon={reconstruction_loss_train}, VQ={VQ_loss_train}, com={commitment_loss_train}')
 
